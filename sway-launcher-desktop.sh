@@ -313,6 +313,15 @@ done
 
 readarray -t COMMAND_STR <<<$(
   fzf --ansi +s -x -d '\034' --nth ..3 --with-nth 3 \
+    --bind=alt-1:accept \
+    --bind=alt-2:up+accept \
+    --bind=alt-3:up+up+accept \
+    --bind=alt-4:up+up+up+accept \
+    --bind=alt-5:up+up+up+up+accept \
+    --bind=alt-6:up+up+up+up+up+accept \
+    --bind=alt-7:up+up+up+up+up+up+accept \
+    --bind=alt-8:up+up+up+up+up+up+up+accept \
+    --bind=alt-9:up+up+up+up+up+up+up+up+accept \
     --print-query \
     --preview "$0 describe {2} {1}" \
     --preview-window=up:2:noborder \
